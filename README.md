@@ -113,15 +113,6 @@ Bug reports, part requests and pull requests are welcome. [CONTRIBUTING.md](CONT
 
 M3E Canvas is free and MIT-licensed, and stays that way. If it saves you time, you can [sponsor the work on GitHub](https://github.com/sponsors/lnkiai); it pays for the hours that go into new parts, the prompt, and reviewing contributions. No feature is behind sponsorship.
 
-<p><a href="https://github.com/sponsors/lnkiai"><img src="docs/readme/ui/sponsor-en.png" height="48" alt="Sponsor on GitHub" /></a></p>
-
-Thanks to the sponsors who keep this going:
-
-<!-- sponsors:start -->
-<p><a href="https://github.com/YspritanHyzygy" title="YspritanHyzygy"><img src="docs/readme/people/YspritanHyzygy.png" width="52" height="52" alt="YspritanHyzygy" /></a></p>
-<!-- sponsors:end -->
-
-## <img src="docs/readme/ui/icon-thanks.png" width="32" height="32" align="absmiddle" alt="" /> Thanks
 
 
 ## <img src="docs/readme/ui/icon-credits.png" width="32" height="32" align="absmiddle" alt="" /> Credits & License
