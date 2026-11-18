@@ -123,11 +123,6 @@ Thanks to the sponsors who keep this going:
 
 ## <img src="docs/readme/ui/icon-thanks.png" width="32" height="32" align="absmiddle" alt="" /> Thanks
 
-Thanks to everyone who has contributed code, ideas and reviews:
-
-<!-- contributors:start -->
-<p><a href="https://github.com/CQMHV" title="CQMHV"><img src="docs/readme/people/CQMHV.png" width="52" height="52" alt="CQMHV" /></a> <a href="https://github.com/Cokedog320" title="Cokedog320"><img src="docs/readme/people/Cokedog320.png" width="52" height="52" alt="Cokedog320" /></a> <a href="https://github.com/Grenish" title="Grenish"><img src="docs/readme/people/Grenish.png" width="52" height="52" alt="Grenish" /></a> <a href="https://github.com/YspritanHyzygy" title="YspritanHyzygy"><img src="docs/readme/people/YspritanHyzygy.png" width="52" height="52" alt="YspritanHyzygy" /></a> <a href="https://github.com/andrewwbuilds" title="andrewwbuilds"><img src="docs/readme/people/andrewwbuilds.png" width="52" height="52" alt="andrewwbuilds" /></a> <a href="https://github.com/rishabhiskawai" title="rishabhiskawai"><img src="docs/readme/people/rishabhiskawai.png" width="52" height="52" alt="rishabhiskawai" /></a> <a href="https://github.com/j-token" title="j-token"><img src="docs/readme/people/j-token.png" width="52" height="52" alt="j-token" /></a> <a href="https://github.com/FlyGues2889" title="FlyGues2889"><img src="docs/readme/people/FlyGues2889.png" width="52" height="52" alt="FlyGues2889" /></a> <a href="https://github.com/xiehuanyi" title="xiehuanyi"><img src="docs/readme/people/xiehuanyi.png" width="52" height="52" alt="xiehuanyi" /></a> <a href="https://github.com/Razshy" title="Razshy"><img src="docs/readme/people/Razshy.png" width="52" height="52" alt="Razshy" /></a> <a href="https://github.com/aakash-kharb" title="aakash-kharb"><img src="docs/readme/people/aakash-kharb.png" width="52" height="52" alt="aakash-kharb" /></a> <a href="https://github.com/kevin9327" title="kevin9327"><img src="docs/readme/people/kevin9327.png" width="52" height="52" alt="kevin9327" /></a></p>
-<!-- contributors:end -->
 
 ## <img src="docs/readme/ui/icon-credits.png" width="32" height="32" align="absmiddle" alt="" /> Credits & License
 
