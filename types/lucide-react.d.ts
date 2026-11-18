@@ -1,0 +1,37 @@
+declare module "lucide-react" {
+  import * as React from "react";
+  export type LucideProps = React.SVGProps<SVGSVGElement> & { size?: number | string };
+  export type LucideIcon = React.FC<LucideProps>;
+  export const X: LucideIcon;
+  export const FileCode: LucideIcon;
+  export const Play: LucideIcon;
+  export const Save: LucideIcon;
+  export const FolderPlus: LucideIcon;
+  export const FilePlus: LucideIcon;
+  export const Settings: LucideIcon;
+  export const Search: LucideIcon;
+  export const Plus: LucideIcon;
+  export const Pause: LucideIcon;
+  export const RotateCcw: LucideIcon;
+  export const Sliders: LucideIcon;
+  export const Activity: LucideIcon;
+  export const Cpu: LucideIcon;
+  export const ToggleLeft: LucideIcon;
+  export const Code: LucideIcon;
+  export const Check: LucideIcon;
+  export const Copy: LucideIcon;
+  export const Download: LucideIcon;
+  export const Columns: LucideIcon;
+  export const Workflow: LucideIcon;
+  export const Undo2: LucideIcon;
+  export const Redo2: LucideIcon;
+  export const Info: LucideIcon;
+  export const Trash2: LucideIcon;
+  export const Wand2: LucideIcon;
+  export const MoreHorizontal: LucideIcon;
+  export const Zap: LucideIcon;
+  export const ZapOff: LucideIcon;
+  export const Highlighter: LucideIcon;
+  const _default: any;
+  export default _default;
+}
