@@ -143,16 +143,24 @@ export const NodeEditor: React.FC<Props> = ({ logic, onChange, p, widgets, frame
   };
 
   const portDot = (node: LogicNode, port: LogicPort, side: "in" | "out", index: number) => {
-    const x = side === "in" ? node.x : node.x + NODE_W;
-    const y = node.y + portY(index);
+    const x = side === "in" ? -6 : NODE_W - 6;
+    const y = portY(index) - 6;
+    const worldX = side === "in" ? node.x : node.x + NODE_W;
+    const worldY = node.y + portY(index);
     const on = side === "out" && link?.from === node.id && link.fromPort === port.id;
     return (
-      <div key={`${side}-${port.id}`} style={{ position: "absolute", left: x - 6, top: y - 6, width: 12, height: 12, borderRadius: 6, background: port.kind === "event" ? pal.primary : port.kind === "boolean" ? pal.tertiaryContainer : pal.secondaryContainer, border: `2px solid ${pal.surface}`, boxShadow: on ? `0 0 0 3px ${pal.primaryContainer}` : "none", cursor: side === "out" ? "crosshair" : "pointer" }}
+      <div
+        key={`${side}-${port.id}`}
+        data-port-side={side}
+        data-node-id={node.id}
+        data-port-id={port.id}
+        style={{ position: "absolute", left: x, top: y, width: 12, height: 12, borderRadius: 6, background: port.kind === "event" ? pal.primary : port.kind === "boolean" ? pal.tertiaryContainer : pal.secondaryContainer, border: `2px solid ${pal.surface}`, boxShadow: on ? `0 0 0 3px ${pal.primaryContainer}` : "none", cursor: side === "out" ? "crosshair" : "pointer", zIndex: 2 }}
         title={tr(LABEL[port.label] ?? "logicValue", lang)}
         onPointerDown={(e) => {
           if (side !== "out") return;
           e.stopPropagation();
-          setLink({ from: node.id, fromPort: port.id, x, y });
+          try { e.currentTarget.releasePointerCapture(e.pointerId); } catch {}
+          setLink({ from: node.id, fromPort: port.id, x: worldX, y: worldY });
         }}
         onPointerUp={(e) => {
           if (side !== "in" || !link) return;
@@ -274,7 +282,21 @@ export const NodeEditor: React.FC<Props> = ({ logic, onChange, p, widgets, frame
             setLink({ ...link, x: (e.clientX - r.left - pan.x) / zoom, y: (e.clientY - r.top - pan.y) / zoom });
           }
         }}
-        onPointerUp={() => { drag.current = null; panning.current = null; setLink(null); }}
+        onPointerUp={(e) => {
+          drag.current = null;
+          panning.current = null;
+          if (link) {
+            const el = document.elementFromPoint(e.clientX, e.clientY) as HTMLElement | null;
+            const portEl = el?.closest("[data-port-side='in']") as HTMLElement | null;
+            const toNode = portEl?.getAttribute("data-node-id");
+            const toPort = portEl?.getAttribute("data-port-id");
+            if (portEl && toNode && toPort) {
+              const wire: LogicConnection = { id: `wire-${Date.now()}`, from: link.from, fromPort: link.fromPort, to: toNode, toPort };
+              commit({ ...graph, connections: [...graph.connections.filter((c) => !(c.to === toNode && c.toPort === toPort)), wire] });
+            }
+          }
+          setLink(null);
+        }}
         onWheel={(e) => setZoom((z) => Math.min(2, Math.max(0.35, z + (e.deltaY < 0 ? 0.08 : -0.08))))}
       >
         <div style={{ position: "absolute", inset: 0, transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`, transformOrigin: "0 0" }}>
@@ -329,8 +351,8 @@ export const NodeEditor: React.FC<Props> = ({ logic, onChange, p, widgets, frame
                   {Object.entries(node.state).slice(0, 2).map(([k, v]) => `${k}: ${String(v)}`).join(" · ")}
                 </div>
                 <div style={{ height: 6 }} />
-                {def.inputs.map((port, i) => <React.Fragment key={`in-${port.id}`}>{portDot(node, port, "in", i)}<span style={{ position: "absolute", left: node.x + 12, top: node.y + portY(i) - 7, fontSize: 9, color: pal.onSurfaceVariant, pointerEvents: "none" }}>{tr(LABEL[port.label] ?? "logicValue", lang)}</span></React.Fragment>)}
-                {def.outputs.map((port, i) => <React.Fragment key={`out-${port.id}`}>{portDot(node, port, "out", i)}<span style={{ position: "absolute", left: node.x + NODE_W - 40, top: node.y + portY(i) - 7, fontSize: 9, color: pal.onSurfaceVariant, pointerEvents: "none" }}>{tr(LABEL[port.label] ?? "logicNext", lang)}</span></React.Fragment>)}
+                {def.inputs.map((port, i) => <React.Fragment key={`in-${port.id}`}>{portDot(node, port, "in", i)}<span style={{ position: "absolute", left: 12, top: portY(i) - 7, fontSize: 9, color: pal.onSurfaceVariant, pointerEvents: "none" }}>{tr(LABEL[port.label] ?? "logicValue", lang)}</span></React.Fragment>)}
+                {def.outputs.map((port, i) => <React.Fragment key={`out-${port.id}`}>{portDot(node, port, "out", i)}<span style={{ position: "absolute", right: 12, top: portY(i) - 7, fontSize: 9, color: pal.onSurfaceVariant, pointerEvents: "none", textAlign: "right" }}>{tr(LABEL[port.label] ?? "logicNext", lang)}</span></React.Fragment>)}
               </div>
             );
           })}
