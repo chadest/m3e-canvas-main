@@ -59,20 +59,24 @@ M3E Canvas is a free, open-source sketchpad for app screens made of real Materia
 
 <img src="docs/readme/ui/feature-ai.png" width="24" height="24" align="absmiddle" alt="" /> **Optional AI help** — Bring your own key to draft a design or write notes for you, or copy an instruction for a coding agent that replies with a share link. Keys never leave your browser.
 
+<img src="docs/readme/ui/feature-parts.png" width="24" height="24" align="absmiddle" alt="" /> **Design details & tools** — A box model inspector in each part's Design panel (below Align) to adjust margin, border, padding and content size, plus sidebar tools for a Monaco-based Code Workspace and a visual Node Editor.
+
 <details>
 <summary><b>Everything it can do</b></summary>
 
-- **Parts** – buttons, icon buttons, FABs and extended FABs, FAB menus, split buttons, chips, top app bars, navigation bars and rails, floating toolbars, tabs, search bars, cards, list items, boxes, bottom sheets, dialogs, snackbars, text fields, dropdowns, switches, checkboxes, radio buttons, sliders, date and time pickers, text, images, carousels, camera and map placeholders, dividers, the shape-morphing loading indicator and wavy progress indicators. Every part has a panel for its text, style, size and alignment, and a trigger tab for what a tap does.
+- **Parts** – buttons, icon buttons, FABs and extended FABs, FAB menus, split buttons, chips, top app bars and collapsing top bars, navigation bars and rails, floating toolbars, tabs, search bars, cards, list items, boxes, bottom sheets, dialogs, snackbars, text fields, dropdowns, switches, checkboxes, radio buttons, sliders, date and time pickers, text, images, avatars, carousels, camera and map placeholders, dividers, the shape-morphing loading indicator and wavy progress indicators, plus media/content and data widgets such as YouTube, video, Lottie, audio player, web view, grid view, table, chart, rating, QR code and scroll view. Every part has a panel for its text, style, size and alignment, and a trigger tab for what a tap does. The Design tab also includes a box model inspector (below Align) to edit margin, border, padding and content size for the selected component.
 - **Magnetic connections** – bring buttons, chips or list items close and they fuse into a connected group; the corners soften where they meet.
 - **Phone and desktop screens** – add as many screens as you like. Switch any screen between a 412×892 phone and a 1280×800 desktop from its label: bars stretch, a navigation bar becomes a rail and back again, and the parts are laid out again. Same-named screens are written into the prompt as one screen at two widths.
 - **Screens that scroll** – make a screen longer than its device and its body scrolls under the bars in the preview. Drag the grip on the bottom bezel, or pick 1x to 3x in the screen panel.
 - **Tap and swipe to navigate** – give any tappable part, app bar icon or navigation destination a target screen (or "back") and a transition: slide from any side, fade, expand or none. Screens can also open others on a swipe. The preview plays it all, and back runs in reverse.
 - **Layers and groups** – a layers panel per screen to change the stacking order; group parts to keep their overlap and move them as one, then copy and paste whole selections across screens.
 - **Theme** – seven palettes or one seed color that becomes a full Material 3 scheme you can fine-tune, light and dark, three contrast levels and dynamic color. Square, rounded or full corners for every part at once. Roboto, Roboto Flex, Roboto Serif or the system font. The standard or the expressive spring motion, which also drives the preview.
-- **Prompt** – the whole design or a single screen as a concise brief in Japanese, English, Chinese or Korean, with your notes on what each part does. Rows, overlaps and aligned grids of cards are spelled out, so the generated layout keeps them. Choose Android or the web as the target, edit the text before copying, or save a screen as a PNG.
+- **Prompt** – the whole design or a single screen as a concise brief in Japanese, English, Chinese, Korean, French, Spanish or German, with your notes on what each part does. Rows, overlaps and aligned grids of cards are spelled out, so the generated layout keeps them. Choose Android or the web as the target, edit the text before copying, or save a screen as a PNG.
 - **Tidy** – one button snaps bars to the edges and the FAB to the corner, joins neighbouring items, and stacks the rest on 16dp margins. Press it again to undo.
 - **AI helper (optional)** – bring your own key for OpenAI, Claude, Gemini or DeepSeek to draft a design from a sentence or write a part's behaviour note and a screen's description. Every rewrite can be undone. The request goes straight from your browser to the provider.
 - **Share links** – copy a link that opens your design on anyone's canvas, or an instruction for Claude Code, Codex or another agent: it reads [agent.md](public/agent.md), sketches what you described, and replies with such a link.
+- **Code & node tools** – open a Monaco-based Code Workspace or a visual Node Editor from the left sidebar (icons above the language selector) in overlay panels.
+- **Languages** – the editor UI and prompts are available in Japanese, English, Chinese, Korean, French, Spanish and German.
 - **Everything else** – alignment guides and a 4dp grid, undo and redo, keyboard shortcuts, a keyboard-usable parts panel, favorites, install as an app, and autosave in your browser.
 - **On a phone** – one fixed screen and a buttons-only editor with bottom sheets. The full editor is for desktop browsers.
 
@@ -107,7 +111,7 @@ The app is a static Next.js export. To host it under a sub-path (for example a G
 
 ## <img src="docs/readme/ui/icon-contribute.png" width="32" height="32" align="absmiddle" alt="" /> Contributing
 
-Bug reports, part requests and pull requests are welcome. [CONTRIBUTING.md](CONTRIBUTING.md) explains the setup, the conventions (English comments, four languages for every string) and where each kind of change lives. Questions go to [Discussions](https://github.com/lnkiai/m3e-canvas/discussions).
+Bug reports, part requests and pull requests are welcome. [CONTRIBUTING.md](CONTRIBUTING.md) explains the setup, the conventions (English comments and localized strings for supported UI languages) and where each kind of change lives. Questions go to [Discussions](https://github.com/lnkiai/m3e-canvas/discussions).
 
 ## <img src="docs/readme/ui/icon-support.png" width="32" height="32" align="absmiddle" alt="" /> Support
 
