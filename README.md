@@ -132,10 +132,6 @@ This edition is derived from [M3E Canvas by lnkiai](https://github.com/lnkiai/m3
 
 ## <img src="docs/readme/ui/icon-contact.png" width="32" height="32" align="absmiddle" alt="" /> Contact
 
-For anything that does not fit an issue, such as collaboration or press, get in touch:
-
-<p><a href="mailto:info@lnkiai.com"><img src="docs/readme/ui/contact-mail.png" height="48" alt="info@lnkiai.com" /></a><a href="https://x.com/lnkiai"><img src="docs/readme/ui/contact-x.png" height="48" alt="@lnkiai on X" /></a></p>
-
 ## <img src="docs/readme/ui/icon-license.png" width="32" height="32" align="absmiddle" alt="" /> License
 
 MIT © lnkiai. Modified and extended edition © Chades't creative. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
