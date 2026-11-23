@@ -21,8 +21,6 @@
 
 </p>
 
-<p align="center"><a href="README.md"><img src="docs/readme/ui/lang-en-on.png" height="40" alt="English" /></a><a href="README.ja.md"><img src="docs/readme/ui/lang-ja.png" height="40" alt="日本語" /></a><a href="README.zh.md"><img src="docs/readme/ui/lang-zh.png" height="40" alt="中文" /></a><a href="README.ko.md"><img src="docs/readme/ui/lang-ko.png" height="40" alt="한국어" /></a></p>
-
 <p align="center"><img src="docs/readme/demo.gif" alt="Sketching the Pantry recipe app in M3E Canvas, tapping through its screens, copying the prompt, Claude Code building it in a terminal, and the finished app running on a phone" /></p>
 
 <p align="center">Sketch the screens, tap through the flow, copy the prompt, and let your AI coding tool build the app. (<a href="docs/readme/demo.mp4">mp4</a>)</p>
