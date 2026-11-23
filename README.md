@@ -130,8 +130,6 @@ This edition is derived from [M3E Canvas by lnkiai](https://github.com/lnkiai/m3
 - [matraic/m3e](https://github.com/matraic/m3e) – Material 3 Expressive as Lit web components (MIT), with React bindings and an icon package. A good home for the screens you sketch here.
 - [Beer CSS](https://www.beercss.com/) – Material Design 3 as a plain CSS framework (MIT). Another way to build the web version of a screen you sketch here.
 
-## <img src="docs/readme/ui/icon-contact.png" width="32" height="32" align="absmiddle" alt="" /> Contact
-
 ## <img src="docs/readme/ui/icon-license.png" width="32" height="32" align="absmiddle" alt="" /> License
 
 MIT © lnkiai. Modified and extended edition © Chades't creative. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
